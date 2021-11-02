@@ -5,7 +5,7 @@ $tableau = array (
     array("Nombres entiers","int",3),
     array("Nombres décimaux","float",19.99),
     array("Booléens","bool",true),
-    array("Rien","null","")
+    array("Rien","NULL","")
   );
 
 echo "<table border=1>";
