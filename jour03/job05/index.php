@@ -5,15 +5,11 @@ $dic = array(
     "consonnes" => "b","c","d","f","g","h","j","k","l","m","n","p","q","r","s","t","v","w","x","z",
     "voyelles" => "a","e","i","o","u","y");
 
-    $a = array(
-        "un" => 1,
-        "deux" => 2,
-        "trois" => 3,
-        "dix-sept" => 17
-    );
     
     foreach ($dic as $k => $v) {
-        echo "\$a[$k] => $v.\n";
+        var_dump($k);
+        var_dump($v);
+echo $v[$k];
     }
     /*
 for($i=0 ; isset($str[$i]) == TRUE ;$i++){
