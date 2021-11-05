@@ -14,7 +14,7 @@
     Date de naissance:    <input type="date" name="date">
         <button type="submit">Envoyer</button>
         <?php
-       if(isset($_GET['texte1'])){
+    if(isset($_GET['texte1'])){
         $tableau =array(
             "LName" => "Nom de famille",$_GET['texte1'],
             "Fname" =>"Prénom",$_GET['texte2'],
