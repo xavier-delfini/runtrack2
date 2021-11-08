@@ -1,5 +1,5 @@
 <?php
-$k= 15;
+$k= 5;
 $l= $k;
 $a= NULL;
 $e= NULL;
