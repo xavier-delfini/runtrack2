@@ -16,8 +16,10 @@ $str=$_GET['str'];
 switch($_GET['fonction']){
     case 0:
         for($i=0;isset($str[$i]); $i++){
-            if($maj==$str[$i]){
+            for($j=0;isset($maj[$j]); $j++){
+            if($maj[$j]==$str[$i]){
             return $str[$i];
+            }
         }
         }
     break;
