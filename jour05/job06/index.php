@@ -1,6 +1,6 @@
 <?php 
 
-function leespeak($str){
+function leetspeak($str){
     for($i=0;isset($str[$i]); $i++){
         switch($str[$i]){
             case "A":
@@ -53,7 +53,9 @@ function leespeak($str){
         return $str;
 }
         
-        echo leespeak("Ceci est une phrase avec des lettres en leetspeak");
-        echo
-        echo leespeak("Babar l'éléphant");
+        echo leetspeak("Ceci est une phrase avec des lettres en leetspeak");
+        echo"<br>";
+        echo leetspeak("Babar l'éléphant");
+        echo"<br>";
+        echo leetspeak("ET C'EST TRES BIEN")
         ?>
