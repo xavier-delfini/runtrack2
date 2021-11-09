@@ -1,30 +1,23 @@
 <?php
-if(isset($_GET['prenom']&& isset($_COOKIE['prenom'])){
-    setcookie('prenom', $_POST['prenom']);
-    header("Refresh");
-    $_POST['prenom']= NULL;
-    header("Refresh:1");
-}
-elseif(isset($_GET['prenom'])
-
-if(!isset($_COOKIE['prenom'])){
-
-echo '<form action="#" methode="POST">';
-echo'<input type="text" name="prenom" >';
-echo'<input type="submit" name="connexion" value="envoyer"/>';
-echo'</form>';
-
-
-}
-else{
-    setcookie('prenom', $_GET['prenom']);
-    header("Refresh");
+if(isset($_COOKIE['prenom'])){
     echo "Bonjour ",$_COOKIE['prenom']," !";
+    echo '<form action="#" method="post">';
+    echo'<input type="submit" name="deco" value="Déconnection"/>';
+    echo'</form>';
+        if(isset($_POST['deco'])){
+            setcookie('prenom', $_POST['prenom'],time()-3600);
+            header("Refresh:1");
+    }
+}
+elseif(isset($_POST['prenom'])){
+setcookie('prenom', $_POST['prenom']);
+header("Refresh:1");
 }
 
-
-
-
-
-
+else{
+echo '<form action="#" method="post">';
+echo'<input type="text" name="prenom" >';
+echo'<input type="submit" name="connexion" value="Envoyer"/>';
+echo'</form>';
+}
 ?>
