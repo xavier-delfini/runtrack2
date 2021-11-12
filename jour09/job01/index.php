@@ -9,12 +9,10 @@
 <body>
 <?php
 $bdd = mysqli_connect("localhost","root","","jour08");
-$col=mysqli_query($bdd,"SHOW COLUMNS FROM etudiants");
 $cont=mysqli_query($bdd,"SELECT * FROM etudiants");
-$colonne = mysqli_fetch_all($col);
 $contenu =mysqli_fetch_all($cont,MYSQLI_ASSOC);
-var_dump($contenu);
 ?>
+
 <table border=1>
     <thead>
 <?php
@@ -26,15 +24,16 @@ echo "<th>",$row,"</th>";
 echo "</tr>";
 echo "</thead>";
 echo "<tbody>";
-
-foreach ($contenu as $conte =>$value){
+foreach ($contenu as $conte => $value){
 echo "<tr>";
-for ($i=0; isset($value[$i]); $i++){
-echo "<td>",$value[$i],"</td>";
+foreach($value as $conte2 => $value2){
+echo "<td>",$value2,"</td>";
+
 }
 echo"</tr>";
 }
 echo"</tbody>";
+echo "</table>";
 ?>
 </body>
 </html>
