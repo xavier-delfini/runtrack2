@@ -1,8 +1,7 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-16">
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
@@ -10,18 +9,16 @@
 <body>
 <?php
 $bdd = mysqli_connect("localhost","root","","jour08");
-$cont=mysqli_query($bdd,"SELECT etage.nom ,salles.nom FROM salles INNER JOIN etage ON salles.id_etage = etage.id");
-$contenu =mysqli_fetch_all($cont,MYSQLI_ASSOC);
+$cont=mysqli_query($bdd,"SELECT salles.nom,etage.nom FROM salles INNER JOIN etage WHERE etage.id = salles.id_etage");
+$contenu =mysqli_fetch_all($cont,);
 ?>
-
 <table border=1>
     <thead>
 <?php
 
-    echo "<tr>";
-    foreach ($contenu[0] as $row =>$ligne){
-echo "<th>",$row,"</th>";
-    }
+echo "<tr>";
+echo "<th>nom_salle</th>";
+echo "<th>nom_étage</th>";
 echo "</tr>";
 echo "</thead>";
 echo "<tbody>";
