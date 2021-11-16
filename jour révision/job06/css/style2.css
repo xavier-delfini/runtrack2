@@ -1,0 +1,8 @@
+body{
+background-color: black;
+    color: white;
+    opacity: 0.3;
+}
+label{
+    color: red!important;
+}
